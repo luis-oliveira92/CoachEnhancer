@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragmentedit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#524cff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <ScrollView android:id="@+id/ScrollView01"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    tools:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:id="@+id/ballic"
+                        android:background="@drawable/ballic"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_marginTop="10sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:id="@+id/coneic"
+                        android:background="@drawable/coneic"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_marginTop="10sp" />
+
+                    <Button
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:id="@+id/s"
+                        android:background="@drawable/paletteic"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_marginTop="10sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        app:srcCompat="@drawable/whiteic"
+                        android:id="@+id/whiteic"
+                        android:layout_marginBottom="2sp"
+                        android:layout_marginTop="2sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        app:srcCompat="@drawable/yellowic"
+                        android:id="@+id/yelloic"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginBottom="2sp"
+                        android:layout_marginTop="2sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        app:srcCompat="@drawable/blueic"
+                        android:id="@+id/blueic"
+                        android:layout_marginBottom="2sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="2sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        app:srcCompat="@drawable/redic"
+                        android:id="@+id/redic"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginStart="10sp"
+                        android:layout_marginBottom="2sp"
+                        android:layout_marginTop="2sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:id="@+id/linethicknessdraw"
+                        android:background="@drawable/lineweightic"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_marginTop="10sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        app:srcCompat="@drawable/xsizeic"
+                        android:id="@+id/xsizeic"
+                        android:layout_marginBottom="2sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginTop="2sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        app:srcCompat="@drawable/xxsizeic"
+                        android:id="@+id/xxsizeic"
+                        android:layout_marginBottom="2sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginTop="2sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        app:srcCompat="@drawable/xxxsizeic"
+                        android:id="@+id/xxxsizeic"
+                        android:layout_marginBottom="2sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginTop="2sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        app:srcCompat="@drawable/addlinesic"
+                        android:id="@+id/freelineic"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_marginTop="10sp"/>
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:id="@+id/playerdraw"
+                        android:background="@drawable/addplayereditoric"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginBottom="10sp"
+                        android:layout_marginTop="10sp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/eraseric"
+                        android:id="@+id/eraseric"
+                        android:layout_marginBottom="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginTop="10sp" />
+
+                    <ImageView
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        app:srcCompat="@drawable/iconeraseric"
+                        android:id="@+id/iconeraseric"
+                        android:layout_marginBottom="10sp"
+                        android:layout_marginLeft="10sp"
+                        android:layout_marginRight="10sp"
+                        android:layout_marginTop="10sp" />
+
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:weightSum="1"
+                android:layout_weight="1"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/centereditorlay">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:id="@+id/drawcanvas">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/drawonme"
+                            android:background="@drawable/soccerfield"
+                            tools:background="@drawable/soccerfield">
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="#aaaaaa"
+                        android:layout_marginTop="5sp">
+
+                        <Button
+                            android:text="1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/button25"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:text="2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/button24"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:text="3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/button23"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:weightSum="2"
+                android:weightSum="1">
+
+                <Button
+                    android:text="Back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="31dp"
+                    android:id="@+id/controlright"
+                    android:onClick="backToMainMenu"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.03"
+                    android:layout_gravity="center_horizontal">
+
+                    <Button
+                        android:text="1"
+                        android:layout_width="50dp"
+                        android:id="@+id/button30"
+                        android:layout_height="50dp" />
+
+                    <Button
+                        android:text="2"
+                        android:layout_width="50dp"
+                        android:id="@+id/button28"
+                        android:layout_height="50dp" />
+
+                    <Button
+                        android:text="3"
+                        android:layout_width="50dp"
+                        android:id="@+id/button27"
+                        android:layout_height="50dp" />
+
+                    <Button
+                        android:text="+"
+                        android:layout_width="50dp"
+                        android:id="@+id/button26"
+                        android:layout_height="50dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button14"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button13"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button12"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button11"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button10"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </LinearLayout>

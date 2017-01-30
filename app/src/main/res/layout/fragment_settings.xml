@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragmentsettings"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F0">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#30356c">
+
+        <Button
+            android:text="Previous"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/Previoussettings"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/profile"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Configuration"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/configuration"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Help"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/help"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="AboutUs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/aboutus"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"></LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:text="EDIT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edit" />
+
+            <Button
+                android:text="confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/confirm" />
+
+            <Button
+                android:text="CANCEL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancel" />
+
+            <Button
+                android:text="LOGOUT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/logout" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
