@@ -3,7 +3,7 @@
     android:id="@+id/fragmentlogo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#524cff"
+    android:background="#8C000000"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -28,19 +28,21 @@
 
             <Button
                 android:text="Login"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnlogin"
                 android:onClick="replaceFragmentLogin"
-                android:layout_weight="0.68" />
+                android:layout_weight="1.05"
+                android:background="#c44c3b" />
 
             <Button
                 android:text="SIGNUP"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnsignup"
                 android:onClick="replaceFragmentSignup"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:background="#c12a14" />
         </LinearLayout>
 
         <ScrollView

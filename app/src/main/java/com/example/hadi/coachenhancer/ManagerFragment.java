@@ -22,12 +22,12 @@ public class ManagerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_manager,container,false);
-        ImageView nextActivity = (ImageView) view.findViewById(R.id.editoriv);
+        ImageView nextActivity = (ImageView) view.findViewById(R.id.editorivteam);
         nextActivity.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 Intent intent = new Intent(getActivity(),EditActvitiy.class);
                 startActivity(intent);
-                Log.d("Error","I am here!!");
+//                Log.d("Error","I am here!!");
             }});
         return view;
     }

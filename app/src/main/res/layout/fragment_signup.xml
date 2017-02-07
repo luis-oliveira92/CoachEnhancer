@@ -3,7 +3,7 @@
     android:id="@+id/fragmentsignup"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#524cff"
+    android:background="@null"
     android:orientation="vertical">
 
     <LinearLayout
@@ -13,21 +13,25 @@
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:inputType="textPersonName"
             android:text=""
             android:background="#ffffff"
             android:ems="10"
             android:id="@+id/firstname_textenter"
             android:layout_weight="1"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="50sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="5sp"
-            android:hint="FirstName" />
+            android:hint="FIRST NAME"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:paddingLeft="10sp"
+            android:textSize="14sp" />
 
         <EditText
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:inputType="textPersonName"
             android:text=""
             android:background="#ffffff"
@@ -36,8 +40,12 @@
             android:layout_weight="1"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="5sp"
-            android:layout_marginRight="50sp"
-            android:hint="LAST NAME" />
+            android:layout_marginRight="10dp"
+            android:hint="LAST NAME"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            android:paddingLeft="10sp"
+            android:textSize="14sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -45,70 +53,55 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="date"
-            android:text=""
-            android:background="#ffffff"
-            android:ems="10"
-            android:id="@+id/birthday_textenter"
-            android:layout_weight="1"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="50sp"
-            android:layout_marginRight="5sp"
-            android:hint="BIRTH DATE" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text=""
-            android:background="#ffffff"
-            android:ems="10"
-            android:id="@+id/profession_textenter"
-            android:layout_weight="1"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="5sp"
-            android:layout_marginRight="50sp"
-            android:hint="PROFESSION" />
     </LinearLayout>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/emailentersignup"
+        android:hint="EMAIL"
+        android:background="#ffffff"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:paddingLeft="10sp"
+        android:inputType="textEmailAddress"
+        android:textSize="14sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:id="@+id/passwordfirstsignup"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="PASSWORD"
+        android:background="#ffffff"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:paddingLeft="10sp"
         android:inputType="textPassword"
-        android:ems="10"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50sp"
-        android:layout_marginRight="50sp"
-        android:id="@+id/emailenter_textview"
-        android:hint="Email"
-        android:background="#ffffff"/>
+        android:textSize="14sp" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:layout_height="30dp"
         android:ems="10"
-        android:id="@+id/passwordfirst_textview"
+        android:id="@+id/passwordsecondsignup"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="50sp"
-        android:layout_marginRight="50sp"
-        android:hint="Password"
-        android:background="#ffffff"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/confirmpassword_textview"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="50sp"
-        android:layout_marginRight="50sp"
-        android:hint="ConfirmPassword"
-        android:background="#ffffff"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="CONFIRM PASSWORD"
+        android:background="#ffffff"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:paddingLeft="10sp"
+        android:inputType="textPassword"
+        android:textSize="14sp" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -118,10 +111,18 @@
     </LinearLayout>
 
     <Button
-        android:layout_marginLeft="50sp"
-        android:layout_marginRight="50sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="50dp"
         android:text="Confirm"
-        android:layout_width="106dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/confirmsignupbtn" />
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:id="@+id/confirmsignupbtn"
+        android:background="#006a3a"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp" />
+
+
+
+
+
 </LinearLayout>

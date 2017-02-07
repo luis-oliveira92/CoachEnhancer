@@ -5,46 +5,55 @@
     android:id="@+id/fragmentlogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#524cff"
+    android:background="@null"
     android:orientation="vertical">
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:ems="10"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:id="@+id/emailenter_textview"
-        android:hint="Email"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/enteremailsignin"
+        android:hint="E-MAIL"
         android:background="#ffffff"
-        android:layout_marginTop="10sp" />
+        android:layout_marginTop="10sp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:layout_height="40sp"
+        android:paddingLeft="10sp"
+        android:textSize="14sp" />
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
+        android:layout_height="40sp"
         android:ems="10"
         android:id="@+id/passwordfirst_textview"
         android:layout_marginTop="10sp"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:hint="Password"
-        android:background="#ffffff"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="PASSWORD"
+        android:background="#ffffff"
+        android:inputType="textPassword"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:paddingLeft="10sp"
+        android:textSize="14sp" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
 
         <CheckBox
             android:text="Remember Me"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/forgetpassword"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:layout_marginTop="10sp" />
 
         <TextView
             android:text="Forget Password?"
@@ -53,14 +62,17 @@
             android:id="@+id/textView"
             android:layout_weight="1"
             android:textAlignment="viewStart"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:layout_marginTop="10sp" />
     </LinearLayout>
 
     <Button
-        android:layout_marginLeft="50sp"
+        android:layout_marginLeft="10dp"
         android:layout_marginRight="50sp"
         android:text="Confirm"
         android:layout_width="106dp"
         android:layout_height="wrap_content"
-        android:id="@+id/confirmsignupbtn" />
+        android:id="@+id/confirmsigninbtn"
+        android:background="#006a3a"
+        android:layout_marginTop="10sp" />
 </LinearLayout>

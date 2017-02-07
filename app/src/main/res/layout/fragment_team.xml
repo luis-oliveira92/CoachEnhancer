@@ -1,89 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentteam"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF0"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="#8C000000">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <Button
-            android:text="Button"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button23" />
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#CC992d19"
+            android:weightSum="1"
+            android:id="@+id/listteamview">
 
-        <Button
-            android:text="Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button21" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button20" />
-    </LinearLayout>
+            <Button
+                android:text="Add Team"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addteamic"
+                android:background="#CCc44c3b"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp" />
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3">
+        android:layout_weight="6"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="#CC992d19">
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="44dp">
 
-            <Button
-                android:text="Button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:id="@+id/button33"
-                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/teamnameedit"
+                android:layout_weight="1"
+                android:background="#c44c3b"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:hint="Insert Team Name" />
 
-            <Button
-                android:text="Button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:id="@+id/button29"
-                android:layout_weight="1" />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText6"
+                android:layout_weight="1"
+                android:background="#c44c3b"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:hint="Insert City"
+                android:padding="5dp" />
 
-            <Button
-                android:text="Button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:id="@+id/button40"
-                android:layout_weight="1" />
+        </LinearLayout>
 
-            <Button
-                android:text="Button"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:id="@+id/button56"
-                android:layout_weight="1" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
 
-            <Button
-                android:text="Button"
+            <ImageView
+                app:srcCompat="@android:color/white"
+                android:id="@+id/imageView"
+                android:layout_height="33dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="2dp"
+                android:layout_width="40dp" />
+
+            <EditText
+                android:layout_height="33dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText8"
+                android:background="#c44c3b"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp"
+                android:layout_width="187dp"
+                android:hint="Main Color" />
+
+            <ImageView
+                app:srcCompat="@android:color/white"
+                android:id="@+id/imageView6"
+                android:layout_height="33dp"
+                android:layout_marginRight="2dp"
+                android:adjustViewBounds="true"
+                android:layout_width="39dp" />
+
+            <EditText
+                android:layout_height="33dp"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText14"
+                android:background="#c44c3b"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp"
+                android:paddingRight="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:id="@+id/button44"
-                android:layout_weight="1" />
+                android:hint="Alternative Color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageButton
+                app:srcCompat="@android:color/white"
+                android:id="@+id/imageButton17"
+                android:background="#ffffff"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <EditText
+                android:layout_width="145dp"
+                android:inputType="textPersonName"
+                android:text="Team Logo"
+                android:ems="10"
+                android:id="@+id/editText12"
+                android:background="#c44c3b"
+                android:layout_height="33dp"
+                android:padding="5dp" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_height="155dp"
+            android:layout_weight="0.02"
+            android:layout_marginBottom="30dp">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -91,96 +172,134 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button57"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton8"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="5dp" />
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button61"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton10"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="5dp" />
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button62"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton9"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="5dp" />
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button58"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton7"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="5dp" />
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button60"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton6"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="5dp" />
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button59"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton5"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="5dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:background="@null">
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button68"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton13"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:background="@null" />
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button67"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton16"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:background="@null"
+                    android:padding="5dp" />
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button66"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton15"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="5dp" />
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button65"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton14"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:background="@null" />
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button64"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton11"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="5dp" />
 
-                <Button
-                    android:text="Button"
+                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/button63"
-                    android:layout_weight="1" />
+                    app:srcCompat="@drawable/addplayer"
+                    android:id="@+id/imageButton12"
+                    android:layout_weight="1"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
+                    android:padding="5dp" />
             </LinearLayout>
         </LinearLayout>
 

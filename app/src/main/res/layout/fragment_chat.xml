@@ -3,7 +3,7 @@
     android:id="@+id/fragmentchat"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff0000"
+    android:background="#8C000000"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -14,68 +14,101 @@
         android:layout_marginRight="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginBottom="5dp"
-        android:layout_marginEnd="5dp">
+        android:layout_marginEnd="5dp"
+        android:background="#8c5c2216"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp">
 
         <Button
-            android:text="Button"
+            android:text="ALL"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button12" />
+            android:id="@+id/button12"
+            android:background="#b6422b"
+            android:textSize="12sp"
+            android:layout_marginBottom="5dp"
+            android:layout_height="40dp" />
 
         <Button
-            android:text="Button"
+            android:text="GOALKEEPERS"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button11" />
+            android:layout_height="40dp"
+            android:id="@+id/button11"
+            android:textSize="12sp"
+            android:background="#b6422b"
+            android:layout_marginBottom="5dp" />
 
         <Button
-            android:text="Button"
+            android:text="DEFENDERS"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button10" />
+            android:layout_height="40dp"
+            android:id="@+id/button10"
+            android:textSize="12sp"
+            android:background="#b6422b"
+            android:layout_marginBottom="5dp" />
 
         <Button
-            android:text="Button"
+            android:text="MIDFIELDERS"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button9" />
+            android:layout_height="40dp"
+            android:id="@+id/button9"
+            android:textSize="12sp"
+            android:background="#b6422b"
+            android:layout_marginBottom="5dp" />
 
         <Button
-            android:text="Button"
+            android:text="FORWARDS"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button8" />
+            android:layout_height="40dp"
+            android:id="@+id/button8"
+            android:textSize="12sp"
+            android:background="#b6422b"
+            android:elevation="24dp"
+            android:layout_marginBottom="5dp" />
 
         <Button
-            android:text="Button"
+            android:text="COACHES"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button7" />
+            android:layout_height="40dp"
+            android:id="@+id/button7"
+            android:textSize="12sp"
+            android:background="#b6422b"
+            android:layout_marginBottom="5dp" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="4">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:id="@+id/textView3"
-            android:background="#ffffff"
-            android:layout_weight="6"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp" />
+        android:layout_weight="4"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:weightSum="1"
+        android:layout_marginBottom="5dp">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="#ff0000">
+            android:background="#5c2216"
+            android:layout_height="224dp"
+            android:layout_weight="1.02">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/textView3"
+                android:background="#ffffff"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:background="#5c2216"
+            android:layout_marginTop="5dp">
 
             <TextView
                 android:layout_width="0dp"
@@ -88,18 +121,19 @@
                 android:layout_marginLeft="5dp" />
 
             <Button
-                android:text="Button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:id="@+id/button13"
-                android:layout_weight="1" />
+                android:background="@drawable/emoticon2"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_height="27dp"
+                android:layout_width="27dp" />
 
             <Button
-                android:text="Button"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
                 android:id="@+id/button14"
-                android:layout_weight="1" />
+                android:background="@drawable/add2"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_width="27dp"
+                android:layout_height="27dp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

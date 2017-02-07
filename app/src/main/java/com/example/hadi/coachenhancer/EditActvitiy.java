@@ -1,8 +1,12 @@
 package com.example.hadi.coachenhancer;
 
+import android.app.FragmentManager;
+import android.app.Service;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -21,8 +25,9 @@ import java.util.Random;
 /**
  * Created by Hadi on 1/29/2017.
  */
-
 public class EditActvitiy extends AppCompatActivity  implements View.OnTouchListener, View.OnClickListener {
+    private boolean isSignedIn = true;
+    public FragmentManager manager;
 
     private static final String TAG = "FingerPaint";
     DrawOnView drawView;
@@ -47,6 +52,9 @@ public class EditActvitiy extends AppCompatActivity  implements View.OnTouchList
     ImageView btnXXsize;
     ImageView btnXXXsize;
 
+
+    ImageView btnShirt;
+
     DrawOnView drawPanel;
     Boolean isDrawable;
     Boolean isDeletable;
@@ -58,6 +66,37 @@ public class EditActvitiy extends AppCompatActivity  implements View.OnTouchList
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R. layout.activity_edit);
+
+        (new Thread(new Runnable()
+        {
+
+            @Override
+            public void run()
+            {
+                while (!Thread.interrupted())
+                    try
+                    {
+                        Thread.sleep(1000);
+                        Log.d("SleepTime", "local Thread sleeping");
+                        runOnUiThread(new Runnable() // start actions in UI thread
+                        {
+
+                            @Override
+                            public void run()
+                            {
+                                CheckConnectivity(); // this action have to be in UI thread
+                            }
+                        });
+                    }
+                    catch (InterruptedException e)
+                    {
+                        // ooops
+                    }finally {
+                        CheckConnectivity();
+                    }
+            }
+        })).start();
+
         isDrawable = false;
         isDeletable = false;
 
@@ -113,6 +152,9 @@ public class EditActvitiy extends AppCompatActivity  implements View.OnTouchList
         // 3X size
         btnXXXsize = (ImageView) findViewById(R.id.xxxsizeic);
         btnXXXsize.setOnClickListener(this);
+
+        btnShirt = (ImageView) findViewById(R.id.playerdraw);
+        btnShirt.setOnClickListener(this);
 
         iv = new ImageView(this);
 
@@ -263,7 +305,8 @@ public class EditActvitiy extends AppCompatActivity  implements View.OnTouchList
             Log.d(TAG, String.valueOf(view.getId()));
         }
 
-        if(view.getId() == btnBall.getId()||view.getId() == btnCone.getId()){
+        if(view.getId() == btnBall.getId()||view.getId() == btnCone.getId()
+                                          ||view.getId() == btnShirt.getId()){
             Log.d(TAG, "I try to Icon");
             drawPanel.setEnabled(false);
             isDrawable=false;
@@ -273,10 +316,12 @@ public class EditActvitiy extends AppCompatActivity  implements View.OnTouchList
                 tempIcon.setBackgroundResource(R.drawable.ballic);
             }else if(view.getId() == btnCone.getId()){
                 tempIcon.setBackgroundResource(R.drawable.coneic);
+            }else if(view.getId() == btnShirt.getId()){
+                tempIcon.setBackgroundResource(R.drawable.shirtic);
             }
 
             tempIcon.setOnTouchListener(this);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(40, 40);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(50, 50);
             tempIcon.setLayoutParams(layoutParams);
 
             RelativeLayout l = (RelativeLayout)findViewById(R.id.drawonme);
@@ -306,7 +351,38 @@ public class EditActvitiy extends AppCompatActivity  implements View.OnTouchList
 
     public void backToMainMenu(View view) {
         Intent intent = new Intent(this,MainActivity.class);
+        intent.putExtra("isSignedIn",true);
         startActivity(intent);
+        Bundle b = new Bundle();
+        b.putBoolean("isSignedIn",true);
+        Log.d("Error","I am here!!");
+    }
+    public void CheckConnectivity(){
+
+        if(!isSignedIn)
+            return;
+
+        ConnectivityManager connectivityManager = (ConnectivityManager)
+                this.getSystemService(Service.CONNECTIVITY_SERVICE);
+        if(connectivityManager!=null){
+            NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+            if(networkInfo!=null){
+                if(networkInfo.getState()== NetworkInfo.State.CONNECTED){
+                    return;
+                }
+            }else{
+                RestartApp(false);
+            }
+        }
+        RestartApp(false);
+    }
+
+    public void RestartApp(boolean state){
+        Intent intent = new Intent(this,MainActivity.class);
+        intent.putExtra("isSignedIn",false);
+        startActivity(intent);
+        Bundle b = new Bundle();
+        b.putBoolean("isSignedIn",false);
         Log.d("Error","I am here!!");
     }
 }

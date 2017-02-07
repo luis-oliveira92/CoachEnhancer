@@ -20,7 +20,6 @@ public class LogoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_logo,container,false);
-
         return view;
     }
 }
