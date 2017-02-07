@@ -8,5 +8,6 @@ Requirements
 - Apple macOS: [Xcode Command Line Tools](https://developer.apple.com/download/more/), also available as command `xcode-select --install` 
 
 
+
 **Application**
  - Minimum system version: Android 4.0.3 Ice Cream Sandwich (API 15)
