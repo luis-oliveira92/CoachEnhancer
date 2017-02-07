@@ -13,7 +13,3 @@ Requirements
 
 **Application**
  - Minimum system version: Android 4.0.3 Ice Cream Sandwich (API 15)
-
-
-*click below*
-<a href="example.com" target="_blank">New Tab</a>
